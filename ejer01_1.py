@@ -1,4 +1,4 @@
-# Ejercicio 1: Calculadora básica con funciones y menú
+# Ejercicio 1.1: Calculadora básica con funciones y menú
 # Autor: Alfonso Luque Sánchez
 
 """
@@ -30,29 +30,32 @@ def dividir(a, b):
     else:
         print("Error: No se puede dividir entre cero.")
 
-
-a = float(input("Introduce el primer valor: "))
-b = float(input("Introduce el segundo valor: "))
+a = 0
+b = 0
 
 while True:
     print("\nMenú de opciones:")
-    print("1. Sumar")
-    print("2. Restar")
-    print("3. Multiplicar")
-    print("4. Dividir")
-    print("5. Salir")
+    print("1. Introducir valores")
+    print("2. Sumar")
+    print("3. Restar")
+    print("4. Multiplicar")
+    print("5. Dividir")
+    print("6. Salir")
 
-    opcion = input("Elige una opción (1-5): ")
+    opcion = input("Elige una opción (1-6): ")
 
     if opcion == "1":
-        sumar(a, b)
+        a = float(input("Introduce el primer valor: "))
+        b = float(input("Introduce el segundo valor: "))
     elif opcion == "2":
-        restar(a, b)
+        sumar(a, b)
     elif opcion == "3":
-        multiplicar(a, b)
+        restar(a, b)
     elif opcion == "4":
-        dividir(a, b)
+        multiplicar(a, b)
     elif opcion == "5":
+        dividir(a, b)
+    elif opcion == "6":
         print("Saliendo del programa.")
         break
     else:
